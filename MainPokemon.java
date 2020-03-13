@@ -6,7 +6,6 @@ public class MainPokemon{
         Scanner scn = new Scanner(System.in);
         ArrayList <Pokemon> PokemonList = new ArrayList<Pokemon>();
         int n;
-        PokemonList.add(new Pokemon());
         while(true){
             Pokemon.menu();
             n = scn.nextInt();
