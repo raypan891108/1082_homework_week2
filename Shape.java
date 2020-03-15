@@ -1,4 +1,3 @@
-import javax.sound.midi.Receiver;
 
 class Shape{
     private String name;
@@ -26,15 +25,6 @@ class Shape{
         }
     }
 
-    // public static void menu(){
-    //     System.out.println("menu:");
-    //     System.out.println("1.circle");
-    //     System.out.println("2.triangle");
-    //     System.out.println("3.rectangle");
-    //     System.out.println("4.Show all");
-    //     System.out.println("5.End");
-    //     System.out.println("operation:");
-    // }
     public void SetShape(float r){
         this.name = "circle";
         this.r = r;
