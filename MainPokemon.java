@@ -5,20 +5,20 @@ public class MainPokemon{
     public static void main(String[] args){
         Scanner scn = new Scanner(System.in);
         ArrayList <Pokemon> PokemonList = new ArrayList<Pokemon>();
-        int n;
+        String n;
         while(true){
             Pokemon.menu();
-            n = scn.nextInt();
+            n = scn.nextLine();
             System.out.println(n);
 
-            if(n == 1){
+            if(n.equals("1")){
 
                 PokemonList.add(new Pokemon());
 
-            }else if(n == 2){
+            }else if(n.equals("2")){
 
                 System.out.println("Pokemon name:");
-                String name = scn.next();
+                String name = scn.nextLine();
                 boolean bool = true;
                 for(int i=0;i<PokemonList.size();i++){
                     if(PokemonList.get(i).getName().equals(name)){
@@ -30,10 +30,10 @@ public class MainPokemon{
                     System.out.println("No Pokemon");
                 }
 
-            }else if(n == 3){
+            }else if(n.equals("3")){
                 
                 System.out.println("Pokemon name:");
-                String name = scn.next();
+                String name = scn.nextLine();
                 boolean bool = true;
                 for(int i=0;i<PokemonList.size();i++){
                     if(PokemonList.get(i).getName().equals(name)){
@@ -45,13 +45,30 @@ public class MainPokemon{
                     System.out.println("No Pokemon");
                 }
                 
-            }else if(n == 4){
+            }else if(n.equals("4")){
+               
+                System.out.println("Pokemon name:");
+                String name = scn.nextLine();
+                System.out.println("Rename:");
+                String newname = scn.nextLine();
+                boolean bool = true;
+                for(int i=0;i<PokemonList.size();i++){
+                    if(PokemonList.get(i).getName().equals(name)){
+                        PokemonList.get(i).Rename(newname);
+                        bool = false;
+                    }
+                }
+                if(bool){
+                    System.out.println("No Pokemon");
+                }
+
+            }else if(n.equals("5")){
 
                 for(int i=0;i<PokemonList.size();i++){
                     PokemonList.get(i).showinfo();
                 }
 
-            }else if(n == 5){
+            }else if(n.equals("6")){
 
                 break;
 
