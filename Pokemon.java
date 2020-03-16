@@ -14,8 +14,9 @@ class Pokemon{
         System.out.println("1: Add new pokemon");
         System.out.println("2: Search pokemon");
         System.out.println("3: Uplevel pokemon");
-        System.out.println("4: Show pokemon list");
-        System.out.println("5: End");
+        System.out.println("4. Rename");
+        System.out.println("5: Show pokemon list");
+        System.out.println("6: End");
         System.out.print("operations:");
     }
 
@@ -26,7 +27,7 @@ class Pokemon{
 
     public void setPokemon(){
         System.out.println("Pokemon name:");
-        String newname = scn.next();
+        String newname = scn.nextLine();
         this.name = newname;
 
         System.out.println("Pokemon level:");
@@ -53,6 +54,9 @@ class Pokemon{
 
     public void UpLevel(){
         this.level++;
+    }
+    public void Rename(String newname){
+        this.name = newname;
     }
 
 
